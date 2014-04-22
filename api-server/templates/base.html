@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+{% load staticfiles %}
+
+<!DOCTYPE html > 
+<html lang="fr">
+	<head> 
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=yes" />
+		<link rel="icon" href="{% static 'img/favicon.png' %}" />
+		<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+		<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+	</head>
+			
+			 
+	<body>
+		
+		<aside class="nav-left col-md-2 col-lg-2 margin-none padding-none">
+			<div class="header">
+				<span style="border-bottom: 1px solid rgb(26, 24, 23);display: inline-block; height:100%; width:100%;">
+					<img src="{%static 'img/car-wait.png'%}" title = "Attente de connexion"/>
+				</span>
+			</div>
+			<nav>
+
+				<ul>
+					<li>
+						<a>
+						<span class="glyphicon glyph glyphicon-home "></span>
+						Tableau de bord
+						</a>
+					</li>
+					<li>
+						<a>
+						<span class="glyphicon glyph glyphicon-th-list "></span>
+						Fichiers
+						<b class="glyphicon glyph glyphicon-plus"></b>
+						</a>
+					</li>
+					<li>
+						<a>
+						<span class="glyphicon glyph glyphicon-wrench "></span>
+						Configuration
+						<b class="glyphicon glyph glyphicon-plus"></b>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+
+		<div class="col-md-10 col-ld-10 padding-none margin-none">
+			<div class="header header-top">
+				<div class="row margin-none height_100">
+					<div class="col-md-5 header-block height_100 text-center">
+						<div class="row margin-none height_100">
+							<div class="col-md-6">
+								Sur le disque
+								<ul class="text-left small-size">
+									<li>1000 fichiers</li>
+									<li>3,9 Mo utilisés</li>
+								</ul>
+							</div>
+							<div class="col-md-6">
+								Sur la cible
+								<ul class="text-left small-size">
+									<li>1000 fichiers</li>
+									<li>3,9 Mo de disponible</li>
+								</ul>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<a class="btn btn-info btn-xs">
+										<span class="glyphicon glyph glyphicon-refresh "></span>
+										Rafraichir ces informations
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-5 header-block height_100 text-center">
+						<div class="row margin-none height_100">
+							<div class="col-md-12">
+								À Envoyer
+								<ul class="text-left small-size">
+									<li>1000 fichiers</li>
+									<li>Taille : 3,9 Mo</li>
+								</ul>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<a class="btn btn-info btn-xs">
+										<span class="glyphicon glyph glyphicon-export "></span>
+										Commencer l'envoi ...
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 header-block height_100 text-center">
+						<a id="login" class="btn btn-info btn-large">
+							<span class="glyphicon glyph glyphicon-user "></span>
+						 	Se connecter 
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="">
+				{%block contenu%}
+				{%endblock%}
+			</div>
+		</div>
+		
+
+		
+		
+	</body>
+</html>

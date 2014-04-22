@@ -106,3 +106,6 @@ class FileList(FileMixin, generics.ListCreateAPIView):
 class FileDetail(FileMixin, generics.RetrieveUpdateDestroyAPIView):
 	pass
 
+
+class DashBoardView(TemplateView):
+	template_name = 'dashboard.html'
