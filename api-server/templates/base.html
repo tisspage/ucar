@@ -10,8 +10,10 @@
 		<link rel="icon" href="{% static 'img/favicon.png' %}" />
 		<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
 		<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
-		<script src="{% static 'js/bootstrap.min.js' %}"></script>
-		<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+
+		<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+		<script src="{% static 'js/bootstrap.js' %}"></script>
+		
 	</head>
 			
 			 
@@ -28,23 +30,96 @@
 				<ul>
 					<li>
 						<a>
-						<span class="glyphicon glyph glyphicon-home "></span>
+						<span class="glyphicon glyph glyphicon-dashboard "></span>
 						Tableau de bord
 						</a>
 					</li>
 					<li>
-						<a>
-						<span class="glyphicon glyph glyphicon-th-list "></span>
-						Fichiers
-						<b class="glyphicon glyph glyphicon-plus"></b>
-						</a>
+						<div class="panel-group" id="accordion">
+							 <div class="panel">
+    							<div class="panel-heading">
+    								<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#file">
+											<span class="glyphicon glyph glyphicon-file "></span>
+											Fichiers
+											
+											<span type="button"  data-toggle="collapse" data-target="#file">
+												<b class="glyphicon glyph glyphicon-plus"></b>
+											</span>
+											
+										</a>
+									</h4>
+								</div>
+								<div id="file" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li>
+												<a>
+													<span class="glyphicon glyph glyphicon-music "></span>
+													Audio
+												</a>
+											</li>
+											<li>
+												<a>
+													<span class="glyphicon glyph glyphicon-globe ">  </span>
+													Map
+												</a>
+											</li>
+											<li>
+												<a>
+													<span class="glyphicon glyph glyphicon-picture "></span>
+													Autres
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						
 					</li>
 					<li>
-						<a>
-						<span class="glyphicon glyph glyphicon-wrench "></span>
-						Configuration
-						<b class="glyphicon glyph glyphicon-plus"></b>
-						</a>
+						<div class="panel-group" id="conf">
+							 <div class="panel">
+    							<div class="panel-heading">
+    								<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#conf" href="#configuration">
+											<span class="glyphicon glyph glyphicon-cog "></span>
+											Configuration
+											
+											<span type="button"  data-toggle="collapse" data-target="#configuration">
+												<b class="glyphicon glyph glyphicon-plus"></b>
+											</span>
+											
+										</a>
+									</h4>
+								</div>
+								<div id="configuration" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li>
+												<a>
+													<span class="glyphicon glyph glyphicon-wrench "> </span>
+													Paramètres généraux
+												</a>
+											</li>
+											<li>
+												<a>
+													<span class="glyphicon glyph glyphicon-plane "> </span>
+													Véhicules
+												</a>
+											</li>
+											<li>
+												<a>
+													<span class="glyphicon glyph glyphicon-user "> </span>
+													Utilisateurs
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
 					</li>
 				</ul>
 			</nav>

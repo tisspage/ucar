@@ -46,15 +46,8 @@ nav ul li a {
    }
 
 
-nav > ul > li > a b {
-    position: absolute !important;
-    right: 10px !important;
-    top: 12px !important;
-    float: right !important;
-	font-size: 14px !important;
-	margin-top: -1px !important;
-
-
+.glyph {
+	margin-right:2px !important;
 }
 
 .header {
@@ -129,6 +122,37 @@ nav > ul > li > a b {
 	padding-right: 0px;
 }
 
+.panel {
+	background : none !important;
+}
+
+.panel-body {
+	background :rgba(69, 69, 69, 0.6) !important;
+	padding:none !important;
+	padding-left:25px !important;
+}
+
+.panel-body>ul>li:hover{
+	background :rgba(69, 69, 69, 0.9) !important;
+}
+
+.panel-group {
+	margin-bottom:0px !important;
+}
+
+.panel-group b {
+    position: absolute !important;
+    right: 10px !important;
+    top: 12px !important;
+    float: right !important;
+	font-size: 14px !important;
+	margin-top: -1px !important;
+	margin-bottom:0px !important;
+}
+
+.panel-heading {
+	padding : 0px;
+}
 .small-size {
 	font-size: 0.85em;
 }
