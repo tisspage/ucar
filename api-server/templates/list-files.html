@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{%block contenu%}
+<div class="row margin-none">
+	<div class="col-md-12">
+		<h1 class="text-center">
+			Fichiers audio sur le disque
+		</h1>
+	</div>
+</div>
+<div class="row margin-none spacer-bottom">
+	<div class="col-md-2 col-md-offset-10">
+		<input name="search" type="text" placeholder="Recherche ...">
+	</div>
+	
+</div>
+
+<div class="row margin-none">
+	<div class="col-md-12">
+		<div class="table-responsive">
+								
+			<table class="table table-bordered table-condensed table-hover smart-form has-tickbox">
+				<thead class="text-center">
+					<tr>
+						<th>Chemin ou titre <a href="javascript:void(0);" class="btn btn-xs btn-default pull-right"><span class="glyphicon glyph glyphicon-sort "></span></a> </th>
+						<th>Artiste <a href="javascript:void(0);" class="btn btn-xs btn-default pull-right"><span class="glyphicon glyph glyphicon-sort "></span></a></th>
+						<th>Album <a href="javascript:void(0);" class="btn btn-xs btn-default pull-right"><span class="glyphicon glyph glyphicon-sort "></a></th>
+						<th>Genre <a href="javascript:void(0);" class="btn btn-xs btn-default pull-right"><span class="glyphicon glyph glyphicon-sort "></a></th>
+						<th>N° Piste <a href="javascript:void(0);" class="btn btn-xs btn-default pull-right"><span class="glyphicon glyph glyphicon-sort "></a></th>
+						<th>Durée <a href="javascript:void(0);" class="btn btn-xs btn-default pull-right"><span class="glyphicon glyph glyphicon-sort "></a></th>
+						<th>
+							<label class="checkbox">
+								<input name="checkbox-inline" type="checkbox">
+								<i></i>
+							</label>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>/home/chrisbian/Musique/kjklj.mp3</td>
+						<td>Rammstein</td>
+						<td>Mutter</td>
+						<td>Metal</td>
+						<td>1</td>
+						<td>3'23</td>
+						<td>
+							<label class="checkbox">
+								<input name="checkbox-inline" type="checkbox">
+								<i></i>
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>Ich Will</td>
+						<td>Rammstein</td>
+						<td>Mutter</td>
+						<td>Metal</td>
+						<td>4</td>
+						<td>4'53</td>
+						<td>
+							<label class="checkbox">
+								<input name="checkbox-inline" type="checkbox" checked="checked">
+								<i></i>
+							</label>
+						</td>
+					</tr>
+					
+					
+				</tbody>
+			</table>
+			
+		</div>
+	</div>
+</div>
+{%endblock%}

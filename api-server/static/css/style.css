@@ -156,3 +156,11 @@ nav ul li a {
 .small-size {
 	font-size: 0.85em;
 }
+
+.spacer {
+	margin-top:2%;
+}
+
+.spacer-bottom {
+	margin-bottom:2%;
+}
