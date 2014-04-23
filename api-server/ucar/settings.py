@@ -13,16 +13,18 @@ __author__ = 'Christophe VAN FRACKEM <contact@tisspage.fr> / Bastien ARNETTE <ba
 __version__= '0.0.1'
 __copyright__ = '© 2014 Tiss\'Page for UCAR'
 
-#REST_FRAMEWORK = {
+REST_FRAMEWORK = {
+    'PAGINATE_BY': 50
 #    'DEFAULT_PERMISSION_CLASSES':(
 #            'rest_framework.permissions.IsAuthenticated',
 
 #        )
-#}
+}
 
 import os
 #PROJECT_ROOT = '/web/vhosts/default'
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__name__))
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG

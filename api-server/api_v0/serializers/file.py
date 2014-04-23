@@ -15,8 +15,16 @@ __copyright__ = '© 2014 Tiss\'Page for UCAR'
 
 
 from rest_framework import serializers
-from api_v0.models import File
+from api_v0.models import File, Infos
+
+class InfosSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = Infos
+        
 
 class FileSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = File
+	info = InfosSerializer(many=False)
+
+	class Meta:
+		model = File
+	    

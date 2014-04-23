@@ -2,76 +2,83 @@
 {% load staticfiles %}
 
 {%block contenu%}
-<div class="row margin-none">
-	<div class="col-md-12">
-		<h1 class="text-center">
-			Fichiers audio sur le disque
-		</h1>
-	</div>
-</div>
-<div class="row margin-none spacer-bottom">
-	<div class="col-md-2 col-md-offset-10">
-		<input name="search" type="text" placeholder="Recherche ...">
-	</div>
-	
-</div>
-
-<div class="row margin-none">
-	<div class="col-md-12">
-		<div class="table-responsive">
-								
-			<table class="table table-bordered table-condensed table-hover smart-form has-tickbox">
-				<thead class="text-center">
-					<tr>
-						<th>Chemin ou titre <a href="javascript:void(0);" class="btn btn-xs btn-default pull-right"><span class="glyphicon glyph glyphicon-sort "></span></a> </th>
-						<th>Artiste <a href="javascript:void(0);" class="btn btn-xs btn-default pull-right"><span class="glyphicon glyph glyphicon-sort "></span></a></th>
-						<th>Album <a href="javascript:void(0);" class="btn btn-xs btn-default pull-right"><span class="glyphicon glyph glyphicon-sort "></a></th>
-						<th>Genre <a href="javascript:void(0);" class="btn btn-xs btn-default pull-right"><span class="glyphicon glyph glyphicon-sort "></a></th>
-						<th>N° Piste <a href="javascript:void(0);" class="btn btn-xs btn-default pull-right"><span class="glyphicon glyph glyphicon-sort "></a></th>
-						<th>Durée <a href="javascript:void(0);" class="btn btn-xs btn-default pull-right"><span class="glyphicon glyph glyphicon-sort "></a></th>
-						<th>
-							<label class="checkbox">
-								<input name="checkbox-inline" type="checkbox">
-								<i></i>
-							</label>
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>/home/chrisbian/Musique/kjklj.mp3</td>
-						<td>Rammstein</td>
-						<td>Mutter</td>
-						<td>Metal</td>
-						<td>1</td>
-						<td>3'23</td>
-						<td>
-							<label class="checkbox">
-								<input name="checkbox-inline" type="checkbox">
-								<i></i>
-							</label>
-						</td>
-					</tr>
-					<tr>
-						<td>Ich Will</td>
-						<td>Rammstein</td>
-						<td>Mutter</td>
-						<td>Metal</td>
-						<td>4</td>
-						<td>4'53</td>
-						<td>
-							<label class="checkbox">
-								<input name="checkbox-inline" type="checkbox" checked="checked">
-								<i></i>
-							</label>
-						</td>
-					</tr>
-					
-					
-				</tbody>
-			</table>
-			
+{% verbatim %}
+<div ng-app="myApp">
+	<div ng-controller="FileCtrl">
+		<div class="row margin-none">
+			<div class="col-md-12">
+				<h1 class="text-center">
+					{{file.count}} Fichiers audio sur le disque
+				
+				<span class="pull-right form-search">
+					<input name="search" type="text" placeholder="Recherche ...">
+				</span>
+				</h1>
+			</div>
 		</div>
+		<div class="row margin-none">
+			<div class="col-md-12">
+				
+				<div class="row margin-none line-list">
+					
+					<div class="col-md-3">
+						Chemin ou titre <a href="javascript:void(0);" class="btn btn-xs btn-default pull-right"><span class="glyphicon glyph glyphicon-sort "></span></a>
+					</div>
+					<div class="col-md-2">
+						Artiste <a href="javascript:void(0);" class="btn btn-xs btn-default pull-right"><span class="glyphicon glyph glyphicon-sort "></span></a>
+					</div>
+					<div class="col-md-2">
+						Album <a href="javascript:void(0);" class="btn btn-xs btn-default pull-right"><span class="glyphicon glyph glyphicon-sort "></span></a>
+					</div>
+					<div class="col-md-2">
+						Genre <a href="javascript:void(0);" class="btn btn-xs btn-default pull-right"><span class="glyphicon glyph glyphicon-sort "></span></a>
+					</div>
+					<div class="col-md-1">
+						Piste <a href="javascript:void(0);" class="btn btn-xs btn-default pull-right"><span class="glyphicon glyph glyphicon-sort "></span></a>
+					</div>
+					<div class="col-md-1">
+						Durée <a href="javascript:void(0);" class="btn btn-xs btn-default pull-right"><span class="glyphicon glyph glyphicon-sort "></span></a>
+					</div>
+					<div class="col-md-1">
+						<label class="checkbox">
+							<input name="checkbox-inline" type="checkbox">
+						</label>
+					</div>
+				</div>
+				<div ng-repeat="fi in file.results">
+					<div class="row margin-none results">
+						<div class="col-md-3">
+							{{fi.info.title}}
+						</div>
+						<div class="col-md-2">
+							{{fi.info.artist}}
+						</div>
+						<div class="col-md-2">
+							{{fi.info.album}}
+						</div>
+						<div class="col-md-2">
+							{{fi.info.genre}}
+						</div>
+						<div class="col-md-1">
+							{{fi.info.tracknumber}}
+						</div>
+						<div class="col-md-1">
+							{{fi.info.length}}
+						</div>
+						<div class="col-md-1">
+							<label class="checkbox">
+								<input name="checkbox-inline" type="checkbox">
+							</label>
+						</div>
+					</div>
+					<hr>
+				</div>
+			</div>
+		</div>
+		
+				
 	</div>
 </div>
+{%endverbatim%}
 {%endblock%}
+

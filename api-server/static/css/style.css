@@ -18,11 +18,24 @@
 
 }
 
+.content {
+	padding-top:90px;
+}
+
+#corps {
+	padding-left:16.67% !important;
+}
 
 body, html {
 	height: 100%;
 }
 
+h1 {
+	font-size: 20px;
+}
+hr {
+	margin : 2px;
+}
 nav ul {
 	width: 100%;
 	padding: 0px;
@@ -45,14 +58,20 @@ nav ul li a {
 
    }
 
+.fixed {
+	position:fixed;
+}
 
+.form-search {
+	font-size: 16px;
+}
 .glyph {
 	margin-right:2px !important;
 }
 
 .header {
 	display: inline-block;
-	width: 100%;
+	width: 83.7%;
 	height:90px;
 	color : rgb(201,201,201);
 	border-style: solid;
@@ -64,6 +83,7 @@ nav ul li a {
 	border-image: none;
 	border-width: 1px 0px;
 	box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1) inset, 0px -1px 0px rgba(0, 0, 0, 0.07) inset;
+	z-index:100;
 }
 .header-top {
 	
@@ -101,6 +121,17 @@ nav ul li a {
 	height:100%;
 }
 
+.line-list {
+	color: rgb(201, 201, 201);
+	font-weight: bold;
+	background : rgb(58, 54, 51);
+	padding-top:5px;
+}
+
+.line-list label{
+	margin-top:0px;
+}
+
 #login {
 	margin: 0 auto;
 	margin-top:20px;
@@ -115,6 +146,7 @@ nav ul li a {
 	min-height: 100%;
 	overflow : hidden;
 	color: rgb(201, 201, 201);
+	position:fixed;
 }
 
 .padding-none {
@@ -153,6 +185,17 @@ nav ul li a {
 .panel-heading {
 	padding : 0px;
 }
+
+.results {
+	font-size: 0.85em;
+	
+}
+
+.results label{
+	margin:0px;
+}
+
+
 .small-size {
 	font-size: 0.85em;
 }
@@ -163,4 +206,8 @@ nav ul li a {
 
 .spacer-bottom {
 	margin-bottom:2%;
+}
+
+.status-connexion {
+	width:100% !important;
 }

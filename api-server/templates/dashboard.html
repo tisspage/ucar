@@ -2,5 +2,19 @@
 {% load staticfiles %}
 
 {%block contenu%}
-dfffdsfds
+
+<div ng-app="myApp">
+  
+  <div ng-controller="FileCtrl">
+  	{% verbatim %}
+    <ul>
+  		<li ng-repeat="f in file.results">
+  			<p>Title: {{ f.info.artist}}</p>
+  		</li>
+	</ul>
+
+    {%endverbatim%}
+  </div>
+</div>
+
 {%endblock%}

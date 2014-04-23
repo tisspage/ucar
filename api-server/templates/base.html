@@ -12,6 +12,9 @@
 
 		<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
 		<script src="{% static 'js/bootstrap.js' %}"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+		<script src="{% static 'js/app.js'%}"></script>
 		
 	</head>
 			
@@ -19,7 +22,7 @@
 	<body>
 		
 		<aside class="nav-left col-md-2 col-lg-2 margin-none padding-none">
-			<div class="header">
+			<div class="header status-connexion">
 				<span style="border-bottom: 1px solid rgb(26, 24, 23);display: inline-block; height:100%; width:100%;">
 					<img src="{%static 'img/car-wait.png'%}" title = "Attente de connexion"/>
 				</span>
@@ -124,9 +127,9 @@
 			</nav>
 		</aside>
 
-		<div class="col-md-10 col-ld-10 padding-none margin-none">
-			<div class="header header-top">
-				<div class="row margin-none height_100">
+		<div class="col-md-10 col-ld-10 col-md-offset-2 padding-none">
+			<div class="header header-top fixed">
+				<div class="row margin-none height_100" >
 					<div class="col-md-5 header-block height_100 text-center">
 						<div class="row margin-none height_100">
 							<div class="col-md-6">
@@ -180,7 +183,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="">
+			<div class="content">
 				{%block contenu%}
 				{%endblock%}
 			</div>
