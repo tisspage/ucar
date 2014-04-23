@@ -109,3 +109,6 @@ class FileDetail(FileMixin, generics.RetrieveUpdateDestroyAPIView):
 
 class DashBoardView(TemplateView):
 	template_name = 'dashboard.html'
+
+class ListView(TemplateView):
+	template_name = 'list-files.html'

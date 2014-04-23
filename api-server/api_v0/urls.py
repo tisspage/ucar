@@ -27,6 +27,7 @@ urlpatterns = patterns('',
 	url(r'^files/(?P<pk>\d+)$', views.FileDetail.as_view()),
 	url(r'^sync$', views.SyncList.as_view()),
 	url(r'^dashboard$', views.DashBoardView.as_view()),
+	url(r'^liste$', views.ListView.as_view()),
 
 	#url(r'^users/(?P<pk>\d+)/adresses$', views.AdresseListUser.as_view()),
 
